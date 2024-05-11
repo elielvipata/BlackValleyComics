@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import Alamofire
+import AlamofireImage
+import UIKit
 
 class ApiHandler{
     let userEndpoint = "https://blackvalleycomics.com/api/user"
@@ -69,10 +72,22 @@ class ApiHandler{
             if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let issues = dataDictionary["issues"] as! [[String:Any]]
+                return completion(issues)
 //                print("Response data: \(String(data: data, encoding: .utf8) ?? "")")
             }
         }
 
         task.resume()
+    }
+    
+    func loadImage(from url: URL, completion: @escaping (Image?) -> Void) {
+        AF.request(url).responseImage { response in
+            if let image = response.value {
+                let uiImage = UIImage(data: response.data!)!
+                completion(uiImage)
+            } else {
+                completion(nil)
+            }
+        }
     }
 }
