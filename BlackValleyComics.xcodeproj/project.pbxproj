@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F2AA4072B8131E300F4D8D5 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA4062B8131E300F4D8D5 /* ApiHandler.swift */; };
 		3F2AA4082B8131E300F4D8D5 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA4062B8131E300F4D8D5 /* ApiHandler.swift */; };
+		3F318C5D2BEFDEAF00F5CDC0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */; };
+		3F318C5E2BEFDEAF00F5CDC0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */; };
+		3F318CA22BF01DA300F5CDC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3F318CA12BF01DA300F5CDC0 /* Alamofire */; };
+		3F318CA52BF01E6100F5CDC0 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F318CA42BF01E6100F5CDC0 /* AlamofireImage */; };
 		5C5DBE83277210B400E19935 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 5C5DBE82277210B400E19935 /* Auth0 */; };
 		5C5DBE86277210C100E19935 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 5C5DBE85277210C100E19935 /* Auth0 */; };
 		5C5DBE88277212E000E19935 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5DBE87277212E000E19935 /* Auth0.plist */; };
@@ -67,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		3F2AA4062B8131E300F4D8D5 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
+		3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Auth0.plist; path = ../Auth0.plist; sourceTree = "<group>"; };
 		5C6537232772F5D90035759D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5C6537262772F5EE0035759D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -120,6 +125,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5DBE83277210B400E19935 /* Auth0 in Frameworks */,
+				3F318CA22BF01DA300F5CDC0 /* Alamofire in Frameworks */,
+				3F318CA52BF01E6100F5CDC0 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				5CDD8856277102DA00052307 /* MainView.swift */,
 				5C6537232772F5D90035759D /* ProfileView.swift */,
 				5C6537262772F5EE0035759D /* User.swift */,
+				3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */,
 				5C5DBE87277212E000E19935 /* Auth0.plist */,
 				3F2AA4062B8131E300F4D8D5 /* ApiHandler.swift */,
 			);
@@ -322,6 +330,8 @@
 			name = "BlackValleyComics (iOS)";
 			packageProductDependencies = (
 				5C5DBE82277210B400E19935 /* Auth0 */,
+				3F318CA12BF01DA300F5CDC0 /* Alamofire */,
+				3F318CA42BF01E6100F5CDC0 /* AlamofireImage */,
 			);
 			productName = "SwiftSample (iOS)";
 			productReference = 5CDD885C277102DC00052307 /* BlackValleyComics.app */;
@@ -390,6 +400,8 @@
 			packageReferences = (
 				5C5DBE81277210B400E19935 /* XCRemoteSwiftPackageReference "Auth0.swift" */,
 				5CD3A4622784F5F900B67D88 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				3F318CA02BF01DA300F5CDC0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3F318CA32BF01E6100F5CDC0 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 5CDD885D277102DC00052307 /* Products */;
 			projectDirPath = "";
@@ -525,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDD8867277102DC00052307 /* MainView.swift in Sources */,
+				3F318C5D2BEFDEAF00F5CDC0 /* Issue.swift in Sources */,
 				3F2AA4072B8131E300F4D8D5 /* ApiHandler.swift in Sources */,
 				5C78D9C127740963000B4B71 /* Views.swift in Sources */,
 				5C6537272772F5EE0035759D /* User.swift in Sources */,
@@ -538,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDD8868277102DC00052307 /* MainView.swift in Sources */,
+				3F318C5E2BEFDEAF00F5CDC0 /* Issue.swift in Sources */,
 				3F2AA4082B8131E300F4D8D5 /* ApiHandler.swift in Sources */,
 				5C78D9C227740975000B4B71 /* Views.swift in Sources */,
 				5C6537282772F5EE0035759D /* User.swift in Sources */,
@@ -973,6 +987,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3F318CA02BF01DA300F5CDC0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		3F318CA32BF01E6100F5CDC0 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 		5C5DBE81277210B400E19935 /* XCRemoteSwiftPackageReference "Auth0.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/Auth0.swift.git";
@@ -992,6 +1022,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F318CA12BF01DA300F5CDC0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F318CA02BF01DA300F5CDC0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3F318CA42BF01E6100F5CDC0 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F318CA32BF01E6100F5CDC0 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		5C5DBE82277210B400E19935 /* Auth0 */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5C5DBE81277210B400E19935 /* XCRemoteSwiftPackageReference "Auth0.swift" */;

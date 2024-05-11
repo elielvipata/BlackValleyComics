@@ -1,4 +1,6 @@
 import SwiftUI
+import Alamofire
+import AlamofireImage
 
 let testUser = User(id: "TestId", name: "TestUsername", email: "email@gmail.com", emailVerified: "true", picture: "pictures", updatedAt: "home")
 
@@ -10,7 +12,7 @@ struct ProfileView: View {
             HomeView(user:profileUser)
                 .tabItem {
                     Image(systemName: "1.circle")
-                    Text("Home")
+                    Text("Latest Issues")
                 }
 
             Favorites()
@@ -46,6 +48,7 @@ struct HomeView: View {
     let user:User
     let apiHandler:ApiHandler
     @State private var data:[[String:Any?]] = []
+    @State var latestIssues:[Issue] = []
     
     init(user:User){
         self.user = user
@@ -53,28 +56,96 @@ struct HomeView: View {
         self.apiHandler.sendUserData(profileUser: user)
     }
     
-    func getLatestIssues() {
-          apiHandler.getLatest { (responseData) in
-              DispatchQueue.main.async {
-                  self.data = responseData!
-              }
-          }
-      }
-    
     var body: some View {
         
-        Button("Load latest", action: getLatestIssues)
+    VStack {
+        List(self.latestIssues, id: \.self) { item in
+            HStack {
+                    AsyncImage(url: URL(string: (item.series?.cover)!)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 100, maxHeight: 100)
+                            .padding(0)
+                        Spacer()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    VStack(alignment: .leading){
+                        Text(item.series?.title ?? "null")
+                            .font(.headline)
+                            .padding(0)
+                        Text(item.issueDetails?.title ?? "null")
+                        Text(item.releaseDate ?? "n/a")
+                    }
+                    .background(Color.white) // Remove the delimiter
+                    .listRowSeparator(.hidden)
+                }
+            }
+        }.onAppear {
+            // Call the API to get the latest issues when the view appears
+            self.apiHandler.getLatest { (responseData) in
+                DispatchQueue.main.async {
+                    for issue in responseData! {
+                        self.latestIssues.append(Issue(dictionary: issue))
+                    }
+                }
+            }
+        }.frame(maxWidth: .infinity)
+    }
+}
 
-//        let data = (1...10).map { "Item \($0)" }
-//        VStack {
-//            List(data, id: \.self) { item in
-//                Image(item)
-//                    .padding()
-//                    .border(Color.gray)
-//            }
-//
-//            Spacer() // Add spacer to fill remaining space
-//        }
+// SwiftUI view for loading remote images using AlamofireImage
+struct RemoteImage: View {
+    let url: URL
+    
+    var body: some View {
+        // Use an image view with AlamofireImage
+        ImageView(url: url)
+            .aspectRatio(contentMode: .fit)
+    }
+}
+
+// Wrapper view around UIImageView with AlamofireImage
+struct ImageView: View {
+    @StateObject private var imageLoader: ImageLoader
+    
+    init(url: URL) {
+        _imageLoader = StateObject(wrappedValue: ImageLoader(url: url))
+    }
+    
+    var body: some View {
+        Group {
+            if let image = imageLoader.image {
+                Image(uiImage: image)
+                    .resizable()
+            } else {
+                // Placeholder or loading indicator
+                // You can customize this as per your requirement
+                ProgressView()
+            }
+        }
+    }
+}
+
+// Image loader class using AlamofireImage
+class ImageLoader: ObservableObject {
+    @Published var image: UIImage?
+    private let url: URL
+    
+    init(url: URL) {
+        self.url = url
+        loadImage()
+    }
+    
+    private func loadImage() {
+        AF.request(url).responseImage { response in
+            if case .success(let downloadedImage) = response.result {
+                DispatchQueue.main.async {
+                    self.image = downloadedImage
+                }
+            }
+        }
     }
 }
 
