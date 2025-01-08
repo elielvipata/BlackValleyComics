@@ -47,7 +47,7 @@ class Issue:Hashable{
 }
 
 class Series{
-    var audienceId:Int64?
+    var audienceId:Int?
     var author:String?
     var id:String?
     var title:String?
@@ -59,7 +59,7 @@ class Series{
     let visible:Bool?
     
     init(dictionary:[String:Any]){
-        self.audienceId = dictionary["audienceID"] as? Int64
+        self.audienceId = dictionary["audienceID"] as? Int
         self.author = dictionary["author"] as? String
         self.id = dictionary["id"] as? String
         self.title = dictionary["title"] as? String
@@ -74,13 +74,13 @@ class Series{
 
 class IssueDetails{
     var title:String
-    var number:Int64
+    var number:Int
     
     init(dictionary:[String:Any]){
                 
         let currentTitle = (dictionary["title"] as? String)!
         self.title = currentTitle.replacingOccurrences(of: "'", with: "")
-        self.number = (dictionary["number"] as? Int64)!
+        self.number = (dictionary["number"] as? Int)!
     }
     
 }

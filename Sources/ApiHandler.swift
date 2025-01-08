@@ -80,6 +80,8 @@ class ApiHandler{
         task.resume()
     }
     
+    
+    
     func loadImage(from url: URL, completion: @escaping (Image?) -> Void) {
         AF.request(url).responseImage { response in
             if let image = response.value {

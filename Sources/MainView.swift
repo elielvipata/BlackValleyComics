@@ -2,6 +2,8 @@ import SwiftUI
 import Auth0
 import CoreData
 
+
+
 struct MainView: View {
     @State var user: User?
     @State private var isLoggedIn: Bool = UserDefaults.standard.bool(forKey: "isLoggedIn");
@@ -12,6 +14,7 @@ struct MainView: View {
             VStack {
                 ProfileView(profileUser: user)
 //                Button("Logout", action: self.logout)
+//                ComicView(issue: Issue(dictionary: issueDictionary))
             }
         } else {
             VStack {

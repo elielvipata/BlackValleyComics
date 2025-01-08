@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1CAEFC2D2DCD67005CF59E /* ComicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CAEFB2D2DCD67005CF59E /* ComicView.swift */; };
+		3F1CAEFD2D2DCD67005CF59E /* ComicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CAEFB2D2DCD67005CF59E /* ComicView.swift */; };
 		3F2AA4072B8131E300F4D8D5 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA4062B8131E300F4D8D5 /* ApiHandler.swift */; };
 		3F2AA4082B8131E300F4D8D5 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA4062B8131E300F4D8D5 /* ApiHandler.swift */; };
 		3F318C5D2BEFDEAF00F5CDC0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */; };
 		3F318C5E2BEFDEAF00F5CDC0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */; };
 		3F318CA22BF01DA300F5CDC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3F318CA12BF01DA300F5CDC0 /* Alamofire */; };
 		3F318CA52BF01E6100F5CDC0 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F318CA42BF01E6100F5CDC0 /* AlamofireImage */; };
+		3FE150CF2D2E110200C2C00B /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE150CE2D2E110200C2C00B /* EPUBKit */; };
+		3FE150D22D2E1FD500C2C00B /* EpubReaderLight in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE150D12D2E1FD500C2C00B /* EpubReaderLight */; };
 		5C5DBE83277210B400E19935 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 5C5DBE82277210B400E19935 /* Auth0 */; };
 		5C5DBE86277210C100E19935 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 5C5DBE85277210C100E19935 /* Auth0 */; };
 		5C5DBE88277212E000E19935 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5DBE87277212E000E19935 /* Auth0.plist */; };
@@ -70,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1CAEFB2D2DCD67005CF59E /* ComicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicView.swift; sourceTree = "<group>"; };
 		3F2AA4062B8131E300F4D8D5 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Auth0.plist; path = ../Auth0.plist; sourceTree = "<group>"; };
@@ -125,8 +130,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5DBE83277210B400E19935 /* Auth0 in Frameworks */,
+				3FE150D22D2E1FD500C2C00B /* EpubReaderLight in Frameworks */,
 				3F318CA22BF01DA300F5CDC0 /* Alamofire in Frameworks */,
 				3F318CA52BF01E6100F5CDC0 /* AlamofireImage in Frameworks */,
+				3FE150CF2D2E110200C2C00B /* EPUBKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +153,7 @@
 			children = (
 				5C78D9BF2774093F000B4B71 /* Supporting Files */,
 				5CDD8856277102DA00052307 /* MainView.swift */,
+				3F1CAEFB2D2DCD67005CF59E /* ComicView.swift */,
 				5C6537232772F5D90035759D /* ProfileView.swift */,
 				5C6537262772F5EE0035759D /* User.swift */,
 				3F318C5C2BEFDEAF00F5CDC0 /* Issue.swift */,
@@ -332,6 +340,8 @@
 				5C5DBE82277210B400E19935 /* Auth0 */,
 				3F318CA12BF01DA300F5CDC0 /* Alamofire */,
 				3F318CA42BF01E6100F5CDC0 /* AlamofireImage */,
+				3FE150CE2D2E110200C2C00B /* EPUBKit */,
+				3FE150D12D2E1FD500C2C00B /* EpubReaderLight */,
 			);
 			productName = "SwiftSample (iOS)";
 			productReference = 5CDD885C277102DC00052307 /* BlackValleyComics.app */;
@@ -402,6 +412,9 @@
 				5CD3A4622784F5F900B67D88 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 				3F318CA02BF01DA300F5CDC0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3F318CA32BF01E6100F5CDC0 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				3F51FBEA2D2E005100B12528 /* XCRemoteSwiftPackageReference "swift-toolkit" */,
+				3FE150CD2D2E110200C2C00B /* XCRemoteSwiftPackageReference "EPUBKit" */,
+				3FE150D02D2E1FD500C2C00B /* XCRemoteSwiftPackageReference "epub-reader-light" */,
 			);
 			productRefGroup = 5CDD885D277102DC00052307 /* Products */;
 			projectDirPath = "";
@@ -537,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDD8867277102DC00052307 /* MainView.swift in Sources */,
+				3F1CAEFC2D2DCD67005CF59E /* ComicView.swift in Sources */,
 				3F318C5D2BEFDEAF00F5CDC0 /* Issue.swift in Sources */,
 				3F2AA4072B8131E300F4D8D5 /* ApiHandler.swift in Sources */,
 				5C78D9C127740963000B4B71 /* Views.swift in Sources */,
@@ -551,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDD8868277102DC00052307 /* MainView.swift in Sources */,
+				3F1CAEFD2D2DCD67005CF59E /* ComicView.swift in Sources */,
 				3F318C5E2BEFDEAF00F5CDC0 /* Issue.swift in Sources */,
 				3F2AA4082B8131E300F4D8D5 /* ApiHandler.swift in Sources */,
 				5C78D9C227740975000B4B71 /* Views.swift in Sources */,
@@ -1003,6 +1018,30 @@
 				minimumVersion = 4.3.0;
 			};
 		};
+		3F51FBEA2D2E005100B12528 /* XCRemoteSwiftPackageReference "swift-toolkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/readium/swift-toolkit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.4;
+			};
+		};
+		3FE150CD2D2E110200C2C00B /* XCRemoteSwiftPackageReference "EPUBKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/witekbobrowski/EPUBKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		3FE150D02D2E1FD500C2C00B /* XCRemoteSwiftPackageReference "epub-reader-light" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pichukov/epub-reader-light.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 		5C5DBE81277210B400E19935 /* XCRemoteSwiftPackageReference "Auth0.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/Auth0.swift.git";
@@ -1031,6 +1070,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3F318CA32BF01E6100F5CDC0 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		3FE150CE2D2E110200C2C00B /* EPUBKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FE150CD2D2E110200C2C00B /* XCRemoteSwiftPackageReference "EPUBKit" */;
+			productName = EPUBKit;
+		};
+		3FE150D12D2E1FD500C2C00B /* EpubReaderLight */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FE150D02D2E1FD500C2C00B /* XCRemoteSwiftPackageReference "epub-reader-light" */;
+			productName = EpubReaderLight;
 		};
 		5C5DBE82277210B400E19935 /* Auth0 */ = {
 			isa = XCSwiftPackageProductDependency;

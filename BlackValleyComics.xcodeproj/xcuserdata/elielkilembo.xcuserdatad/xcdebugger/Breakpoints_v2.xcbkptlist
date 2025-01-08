@@ -78,42 +78,10 @@
             filePath = "Sources/MainView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "491CB27A-752F-41A8-B262-618CB9504B4C - 8b4566231cbb6167"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftSample.MainView.body.getter : some"
-                  moduleName = "SwiftSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elielkilembo/Downloads/sample-01/Sources/MainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "9"
-                  endingLineNumber = "9"
-                  offsetFromSymbolStart = "608">
-               </Location>
-               <Location
-                  uuid = "491CB27A-752F-41A8-B262-618CB9504B4C - 8b4566231cbb6167"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftSample.MainView.body.getter : some"
-                  moduleName = "SwiftSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elielkilembo/Downloads/sample-01/Sources/MainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "9"
-                  endingLineNumber = "9"
-                  offsetFromSymbolStart = "664">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -130,74 +98,12 @@
             endingLineNumber = "6"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "7D285205-04A1-4432-A3EA-35874061BDE9 - a92a37d61aee17ec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftSample.SwiftSampleApp.body.getter : some"
-                  moduleName = "SwiftSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elielkilembo/Downloads/sample-01/Sources/Supporting%20Files/App.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "7"
-                  endingLineNumber = "7"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "7D285205-04A1-4432-A3EA-35874061BDE9 - f64088cd6053ca9b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in SwiftSample.SwiftSampleApp.body.getter : some"
-                  moduleName = "SwiftSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elielkilembo/Downloads/sample-01/Sources/Supporting%20Files/App.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "8"
-                  endingLineNumber = "8"
-                  offsetFromSymbolStart = "228">
-               </Location>
-               <Location
-                  uuid = "7D285205-04A1-4432-A3EA-35874061BDE9 - 61d0d03cfd6f4d8f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BlackValleyComics.SwiftSampleApp.body.getter : some"
-                  moduleName = "BlackValleyComics"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elielkilembo/Downloads/sample-01/Sources/Supporting%20Files/App.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "6"
-                  endingLineNumber = "6"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "7D285205-04A1-4432-A3EA-35874061BDE9 - ce9988416d40c3f1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in BlackValleyComics.SwiftSampleApp.body.getter : some"
-                  moduleName = "BlackValleyComics"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elielkilembo/Downloads/sample-01/Sources/Supporting%20Files/App.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "7"
-                  endingLineNumber = "7"
-                  offsetFromSymbolStart = "228">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "494C398D-EFFE-4EA7-BD31-93CB49FE7868"
+            uuid = "FC0A23CE-4CB0-42C9-A0A9-1B15B03385FC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -208,6 +114,38 @@
             endingLineNumber = "90"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABF894A2-9150-4C06-BBAA-9DEF5E931C20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/ProfileView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBD2423A-C9B3-4B35-A7ED-07F3B5C6F365"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/ComicView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "makeUIView(context:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

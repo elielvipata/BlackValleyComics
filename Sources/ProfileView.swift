@@ -4,6 +4,8 @@ import AlamofireImage
 
 let testUser = User(id: "TestId", name: "TestUsername", email: "email@gmail.com", emailVerified: "true", picture: "pictures", updatedAt: "home")
 
+
+
 struct ProfileView: View {
     let profileUser : User
 
@@ -49,6 +51,8 @@ struct HomeView: View {
     let apiHandler:ApiHandler
     @State private var data:[[String:Any?]] = []
     @State var latestIssues:[Issue] = []
+    @State private var selectedIssue: Issue? = nil
+
     
     init(user:User){
         self.user = user
@@ -57,42 +61,54 @@ struct HomeView: View {
     }
     
     var body: some View {
-        
-    VStack {
-        List(self.latestIssues, id: \.self) { item in
-            HStack {
-                    AsyncImage(url: URL(string: (item.series?.cover)!)) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 100, maxHeight: 100)
-                            .padding(0)
-                        Spacer()
-                    } placeholder: {
-                        ProgressView()
+            VStack {
+                List(self.latestIssues, id: \.self) { item in
+                    HStack {
+                        AsyncImage(url: URL(string: (item.series?.cover)!)) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: 100, maxHeight: 100)
+                                .padding(0)
+                            Spacer()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        VStack(alignment: .leading) {
+                            Text(item.series?.title ?? "null")
+                                .font(.headline)
+                                .padding(0)
+                            Text(item.issueDetails?.title ?? "null")
+                            Text(item.releaseDate ?? "n/a")
+                        }
+                        .background(Color.white) // Remove the delimiter
+                        .listRowSeparator(.hidden)
                     }
-                    VStack(alignment: .leading){
-                        Text(item.series?.title ?? "null")
-                            .font(.headline)
-                            .padding(0)
-                        Text(item.issueDetails?.title ?? "null")
-                        Text(item.releaseDate ?? "n/a")
-                    }
-                    .background(Color.white) // Remove the delimiter
-                    .listRowSeparator(.hidden)
-                }
-            }
-        }.onAppear {
-            // Call the API to get the latest issues when the view appears
-            self.apiHandler.getLatest { (responseData) in
-                DispatchQueue.main.async {
-                    for issue in responseData! {
-                        self.latestIssues.append(Issue(dictionary: issue))
+                    .onTapGesture {
+                        // Print the item ID and update selectedIssue
+                        print(item.id)
+                        selectedIssue = item
                     }
                 }
+                
+                if(selectedIssue != nil){
+                    ComicView(issue: selectedIssue)
+                        .padding()
+                }
+
             }
-        }.frame(maxWidth: .infinity)
-    }
+            .onAppear {
+                // Call the API to get the latest issues when the view appears
+                self.apiHandler.getLatest { (responseData) in
+                    DispatchQueue.main.async {
+                        for issue in responseData! {
+                            self.latestIssues.append(Issue(dictionary: issue))
+                        }
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity)
+        }
 }
 
 // SwiftUI view for loading remote images using AlamofireImage
